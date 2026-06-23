@@ -57,4 +57,8 @@ public class Booking {
     private LocalDateTime createdAt;
 
     private LocalDateTime cancelledAt;
+
+    /** Guards against sending duplicate show reminders. */
+    @Column(nullable = false)
+    private boolean reminderSent = false;
 }
