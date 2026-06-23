@@ -28,7 +28,7 @@ public class DiscountCode {
     private DiscountType discountType;
 
     /** Percent (0-100) when PERCENT, or flat currency amount when FLAT. */
-    @Column(nullable = false, precision = 10, scale = 2)
+    @Column(name = "discount_value", nullable = false, precision = 10, scale = 2)
     private BigDecimal value;
 
     private LocalDateTime validFrom;
